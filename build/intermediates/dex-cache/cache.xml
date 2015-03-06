@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\android_projects\LostFilmRSS\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\android_projects\LostFilmRSS\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-c2cdf92209905ae5ece5a1c0c8f60281c4d33867.jar" />
+    </item>
+    <item
+        jar="C:\android_projects\LostFilmRSS\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\android_projects\LostFilmRSS\app\build\intermediates\pre-dexed\debug\classes-9ad84eae3685a4e108c098627861e7d06fd51a39.jar" />
+    </item>
+    <item
+        jar="C:\android_projects\LostFilmRSS\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\android_projects\LostFilmRSS\app\build\intermediates\pre-dexed\debug\classes-d0bd2c9e0a48a334cf329567a1c2e36ea498c806.jar" />
+    </item>
+    <item
+        jar="C:\Users\Stas\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="C:\android_projects\LostFilmRSS\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-c478828f7b3e8833a701c65d89dc2a2b177a023c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Stas\.gradle\caches\modules-2\files-2.1\com.nostra13.universalimageloader\universal-image-loader\1.9.3\a85588bec3e2c4584d593d3f15df1677321bca72\universal-image-loader-1.9.3.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
+        <dex dex="C:\android_projects\LostFilmRSS\app\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.3-47d7d455dcfb57715b267f74dc78833429b29ed1.jar" />
+    </item>
+    <item
+        jar="C:\Users\Stas\.gradle\caches\modules-2\files-2.1\com.loopj.android\android-async-http\1.4.5\77bf7cacf9cefe19dc105e5425d2eb1bb5285881\android-async-http-1.4.5.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="77bf7cacf9cefe19dc105e5425d2eb1bb5285881">
+        <dex dex="C:\android_projects\LostFilmRSS\app\build\intermediates\pre-dexed\debug\android-async-http-1.4.5-8fa8c88496266ffb4b18d92e2490a76183acb5cf.jar" />
+    </item>
+
+</items>

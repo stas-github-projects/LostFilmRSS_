@@ -1,0 +1,30 @@
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.rss.lostfilm.lostfilmrss.app.MainActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <fragment
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:name="com.rss.lostfilm.lostfilmrss.listview_fragments"
+            android:id="@+id/fragment_lv"
+            tools:layout="@layout/listview_fragment" />
+        </RelativeLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>
+
