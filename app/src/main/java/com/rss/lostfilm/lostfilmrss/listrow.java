@@ -80,6 +80,7 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
         //this.map_links = map_l;
         //this.map_images = map_i;
 
+
         this.lst_rssitems = _rssitems;
 
     }
@@ -116,25 +117,25 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
                 txtSerie.setText(_rss.serie);
 
                 //detect format and links
-                for (int j = 0; j < _rss.arr_format.size(); j++) {
-                    if (_rss.arr_format.get(j).equals("[AVI]")) {
-                        simg1 = _rss.arr_links.get(j);
-                        img_avi.setAlpha((float) 1);
-                        img_avi.setTag(simg1);
-                    } else if (_rss.arr_format.get(j).equals("[MP4]")) {
-                        simg2 = _rss.arr_links.get(j);
-                        img_mp4.setAlpha((float) 1);
-                        img_mp4.setTag(simg2);
-                    } else if (_rss.arr_format.get(j).equals("[720p]")) {
-                        simg3 = _rss.arr_links.get(j);
-                        img_720p.setAlpha((float) 1);
-                        img_720p.setTag(simg3);
-                    } else if (_rss.arr_format.get(j).equals("[1080p]")) {
-                        simg4 = _rss.arr_links.get(j);
-                        img_1080p.setAlpha((float) 1);
-                        img_1080p.setTag(simg4);
-                    }
-                }
+//                for (int j = 0; j < _rss.arr_format.size(); j++) {
+//                    if (_rss.arr_format.get(j).equals("[AVI]")) {
+//                        simg1 = _rss.arr_links.get(j);
+//                        img_avi.setAlpha((float) 1);
+//                        img_avi.setTag(simg1);
+//                    } else if (_rss.arr_format.get(j).equals("[MP4]")) {
+//                        simg2 = _rss.arr_links.get(j);
+//                        img_mp4.setAlpha((float) 1);
+//                        img_mp4.setTag(simg2);
+//                    } else if (_rss.arr_format.get(j).equals("[720p]")) {
+//                        simg3 = _rss.arr_links.get(j);
+//                        img_720p.setAlpha((float) 1);
+//                        img_720p.setTag(simg3);
+//                    } else if (_rss.arr_format.get(j).equals("[1080p]")) {
+//                        simg4 = _rss.arr_links.get(j);
+//                        img_1080p.setAlpha((float) 1);
+//                        img_1080p.setTag(simg4);
+//                    }
+//                }
                 img_favs.setTag(_rss.title);//favorites
 
                 //detect favorites in list

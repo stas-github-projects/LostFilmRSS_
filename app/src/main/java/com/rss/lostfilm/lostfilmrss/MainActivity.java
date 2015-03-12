@@ -41,6 +41,7 @@ import android.widget.Toast;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.SyncHttpClient;
+import com.rss.lostfilm.lostfilmrss.adapters.RowAdapter;
 
 import org.apache.http.Header;
 import org.apache.http.HttpResponse;
@@ -398,8 +399,8 @@ public class MainActivity extends FragmentActivity implements SwipeRefreshLayout
                 //adapter = new ArrayAdapter<ArrayList<RSSItems>>(this,
                 //        simple_list_item_1, data);
 
-                String[] strarr = new String[data.size()];//map_nameformat.size()];
-                listrow adapter = new listrow(MainActivity.this, strarr, data);
+//                String[] strarr = new String[data.size()];//map_nameformat.size()];
+                RowAdapter adapter = new RowAdapter(MainActivity.this, data);
 
                 _list.setAdapter(adapter);
             }
@@ -610,8 +611,9 @@ public class MainActivity extends FragmentActivity implements SwipeRefreshLayout
                                     //RSS ITEMS CLASS ITEMS
                                     if (strprevname.equals(strname)) {
                                         RSSItems _rss = lst_rssitems.get(lst_rssitems.size() - 1);
-                                        _rss.arr_format.add(strformat);
-                                        _rss.arr_links.add(arrlist_links.get(i));
+                                        _rss.formats.put(strformat, arrlist_links.get(i));
+//                                        _rss.arr_format.add(strformat);
+//                                        _rss.arr_links.add(arrlist_links.get(i));
                                         //lst_rssitems.add(_rss);
                                         //strprevname=strname;
                                     } else {
@@ -619,8 +621,9 @@ public class MainActivity extends FragmentActivity implements SwipeRefreshLayout
                                         _rss.title = strname;
                                         _rss.is_favorite = b_is_favorite;
                                         //_rss.serie=strserie;
-                                        _rss.arr_format.add(strformat);
-                                        _rss.arr_links.add(arrlist_links.get(i));
+                                        _rss.formats.put(strformat, arrlist_links.get(i));
+//                                        _rss.arr_format.add(strformat);
+//                                        _rss.arr_links.add(arrlist_links.get(i));
                                         _rss.serie = GetSerieFromCode(arrlist_rawimage.get(i));
                                         _rss.image = GetImageFromCode(arrlist_rawimage.get(i));
                                         lst_rssitems.add(_rss);
@@ -643,8 +646,9 @@ public class MainActivity extends FragmentActivity implements SwipeRefreshLayout
                                     //RSS ITEMS CLASS ITEMS
                                     if (strprevname.equals(strname)) {
                                         RSSItems _rss = lst_rssitems.get(lst_rssitems.size() - 1);
-                                        _rss.arr_format.add("[AVI]");
-                                        _rss.arr_links.add(arrlist_links.get(i));
+                                        _rss.formats.put("[AVI]", arrlist_links.get(i));
+//                                        _rss.arr_format.add("[AVI]");
+//                                        _rss.arr_links.add(arrlist_links.get(i));
                                         //lst_rssitems.add(_rss);
                                         //strprevname=strname;
                                     } else {
@@ -652,8 +656,9 @@ public class MainActivity extends FragmentActivity implements SwipeRefreshLayout
                                         _rss.title = strname;
                                         _rss.is_favorite = b_is_favorite;
                                         //_rss.serie=strserie;
-                                        _rss.arr_format.add("[AVI]");
-                                        _rss.arr_links.add(arrlist_links.get(i));
+                                        _rss.formats.put("[AVI]", arrlist_links.get(i));
+//                                        _rss.arr_format.add("[AVI]");
+//                                        _rss.arr_links.add(arrlist_links.get(i));
                                         _rss.serie = GetSerieFromCode(arrlist_rawimage.get(i));
                                         _rss.image = GetImageFromCode(arrlist_rawimage.get(i));
                                         lst_rssitems.add(_rss);

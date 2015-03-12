@@ -1,8 +1,15 @@
 package com.rss.lostfilm.lostfilmrss;
 
 import android.app.Application;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+
+import com.nostra13.universalimageloader.cache.memory.impl.UsingFreqLimitedMemoryCache;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 
 /**
  * Created by Stas on 02.03.2015.
@@ -20,6 +27,7 @@ public class prefs extends Application {
     public void onCreate() {
         super.onCreate();
         _instance=this;
+        initImageLoader(this);
     }
 
     public static prefs getInstance() {
@@ -72,6 +80,33 @@ public class prefs extends Application {
         {
             StackTraceElement[] h= e.getStackTrace();
         }
+    }
+
+    public static ImageLoader initImageLoader(Context c) {
+        if (ImageLoader.getInstance().isInited())
+            return ImageLoader.getInstance();
+
+        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(c)
+                .defaultDisplayImageOptions(getImageLoaderOptions())
+                .discCacheSize(50 * 1024 * 1024)
+                .discCacheFileCount(100)
+                .memoryCache(new UsingFreqLimitedMemoryCache(2 * 1024 * 1024)) // 2 Mb
+                .build();
+
+        ImageLoader.getInstance().init(config);
+        return ImageLoader.getInstance();
+    }
+
+    public static DisplayImageOptions getImageLoaderOptions() {
+        return getImageLoaderOptionsBuilder().build();
+    }
+
+    public static DisplayImageOptions.Builder getImageLoaderOptionsBuilder() {
+        return new DisplayImageOptions.Builder()
+                .cacheInMemory(true)
+                .cacheOnDisc(true)
+                .resetViewBeforeLoading(false)
+                .displayer(new FadeInBitmapDisplayer(400, true, true, false));
     }
 
 }
