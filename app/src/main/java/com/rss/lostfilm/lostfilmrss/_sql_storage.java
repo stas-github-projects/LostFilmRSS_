@@ -17,7 +17,6 @@ public class _sql_storage
             this.author = author;
         }
 
-        private int yyy=0;
         public int getId(){return this.id;}
         public void setId(int value){this.id = value;}
         public String getTitle(){return this.title;}
