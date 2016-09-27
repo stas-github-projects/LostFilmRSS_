@@ -18,6 +18,7 @@ public class NetworkChangeReceiver extends BroadcastReceiver {
             {
                 Toast.makeText(context, "!!!", Toast.LENGTH_SHORT);
                 context.startService(intent);
+                int i=0;
             }
         }
 
